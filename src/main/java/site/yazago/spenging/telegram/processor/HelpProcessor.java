@@ -22,6 +22,6 @@ public class HelpProcessor implements IMessageProcessor {
 
     @Override
     public SendMessage process(Message message) {
-        return new SendMessage().setChatId(message.getChatId()).setText(properties.getHelpProcessorMessage());
+        return new SendMessage(message.getChatId(), properties.getHelpProcessorMessage());
     }
 }

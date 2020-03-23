@@ -22,6 +22,6 @@ public class DefaultProcessor implements IMessageProcessor {
 
     @Override
     public SendMessage process(Message message) {
-        return new SendMessage().setChatId(message.getChatId()).setText(properties.getDefaultProcessorMessage());
+        return new SendMessage(message.getChatId(), properties.getDefaultProcessorMessage());
     }
 }

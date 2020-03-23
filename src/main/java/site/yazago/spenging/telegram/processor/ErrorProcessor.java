@@ -21,6 +21,6 @@ public class ErrorProcessor implements IMessageProcessor {
 
     @Override
     public SendMessage process(Message message) {
-        return new SendMessage().setChatId(message.getChatId()).setText(properties.getErrorProcessorMessage());
+        return new SendMessage(message.getChatId(), properties.getErrorProcessorMessage());
     }
 }
